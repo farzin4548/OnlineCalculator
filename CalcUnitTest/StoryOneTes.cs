@@ -2,25 +2,21 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OnlineCalculator.Models;
-using Assert = NUnit.Framework.Assert;
 
 namespace CalcUnitTest
 {
-    [TestFixture]
+    [TestClass]
     public class StoryOneTes
     {
-        private Expression expression;
-        public void setupTest()
-        {
-            expression = new Expression();
-        }
-        [Test()]
+        [TestMethod]
         public void WhenPlusTwoOperandResultMustExpected()
         {
-            expression.Operand1 = 1;
+            Expression expression = new Expression();
+
+            expression.Operand1 = 2;
             expression.Operand2 = 3;
             expression.Operator = Operator.ADD;
-            Assert.AreEqual(expression.Result, 5);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(expression.Result, 5);
         }
 
 
