@@ -15,7 +15,7 @@ namespace CalcUnitTest
             expression = new Expression();
         }
         [Test()]
-        public void WhenPlus()
+        public void WhenPlusTwoOperandResultMustExpected()
         {
             expression.Operand1 = 1;
             expression.Operand2 = 3;
