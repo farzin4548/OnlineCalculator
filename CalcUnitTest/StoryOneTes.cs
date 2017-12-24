@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OnlineCalculator.Models;
-
+using Assert = NUnit.Framework.Assert;
 
 namespace CalcUnitTest
 {
@@ -15,11 +15,14 @@ namespace CalcUnitTest
             expression = new Expression();
         }
         [Test()]
-        public void First()
+        public void WhenPlus()
         {
-         
-
-
+            expression.Operand1 = 1;
+            expression.Operand2 = 3;
+            expression.Operator = Operator.ADD;
+            Assert.AreEqual(expression.Result, 5);
         }
+
+
     }
 }
