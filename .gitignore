@@ -3,3 +3,4 @@ OnlineCalculator/bin/**
 OnlineCalculator/obj/**
 CalcUnitTest/bin/**
 CalcUnitTest/obj/**
+.vs/**
