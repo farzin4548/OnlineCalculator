@@ -7,7 +7,10 @@ namespace OnlineCalculator.Models
 {
     public class Expression
     {
-        public float Operand1 { get; set; }
+        public float Operand1
+        {
+            get   ; set;
+        }
         public float Operand2 { get; set; }
         public Operator Operator { get; set; }
 
@@ -30,7 +33,7 @@ namespace OnlineCalculator.Models
                         return 0;
                 }
             }
-        }        
+        }
     }
 
 
