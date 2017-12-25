@@ -20,5 +20,11 @@ namespace OnlineCalculator.Models
 
             return int.Parse(splitedExpr[0]) + int.Parse(splitedExpr[1]);
         }
+
+        public double Sinus(string expr)
+        {
+            double result = Math.Sin(double.Parse(expr));
+            return Math.Round(result,0);
+        }
     }
 }
