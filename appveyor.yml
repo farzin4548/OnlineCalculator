@@ -4,7 +4,7 @@ before_build:
 build:
   publish_wap: true
   verbosity: minimal
-test: off
+
 deploy:
     provider: Environment
     name: TeamOmlet
