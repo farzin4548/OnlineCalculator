@@ -17,7 +17,7 @@ namespace CalcUnitTest
             StringCalculation stringCalculation = new StringCalculation();
             string expr ="5,2";
             int result = stringCalculation.Minus(expr);
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 6);
 
         }
 
