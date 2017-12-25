@@ -7,15 +7,32 @@ namespace OnlineCalculator.Models
 {
     public class Expression
     {
-        public float Operand1 { get; set; }
+        private IUSDGBPExchangeRateFeed uSDGBPExchangeRateFeed;
+
+        public Expression(IUSDGBPExchangeRateFeed uSDGBPExchangeRateFeed)
+        {
+            this.uSDGBPExchangeRateFeed = uSDGBPExchangeRateFeed;
+        }
+        public Expression()
+        {
+        }
+        public float Operand1
+        {
+            get; set;
+        }
         public float Operand2 { get; set; }
-        public Operator Operator { get; set; }
+        public Operator? Operators { get; set; }
+        public int ConvertUSDtoGBP(int USDValue)
+        {
+            return this.uSDGBPExchangeRateFeed.GetGBPRate();
+        }
 
         public float Result
         {
             get
             {
-                switch (Operator)
+                if (!Operators.HasValue) { return 0; }
+                switch (Operators.Value)
                 {
                     case Operator.SUBTRACTION:
                         return Operand1 - Operand2;
@@ -30,7 +47,13 @@ namespace OnlineCalculator.Models
                         return 0;
                 }
             }
-        }        
+        }
+
+        public void Reset()
+        {
+            Operand1 = 0;
+            Operand2 = 0;
+        }
     }
 
 
