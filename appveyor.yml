@@ -6,7 +6,7 @@ build:
   verbosity: minimal
 test: off
 deploy:
-  provider: Environment
+  provider: WebDeploy
   name: TeamOmlet
   on:
-  branch: master
+     branch: master
