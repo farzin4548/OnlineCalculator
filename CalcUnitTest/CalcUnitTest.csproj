@@ -83,10 +83,12 @@
       <DependentUpon>AddSpecTest.feature</DependentUpon>
     </Compile>
     <Compile Include="AddSpecTestSteps.cs" />
+    <Compile Include="MinusTest.cs" />
     <Compile Include="ResetTest.cs" />
     <Compile Include="StoryOneTes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddString.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AddSpecTest.feature">

@@ -7,7 +7,6 @@ namespace OnlineCalculator.Models
 {
     public class Expression
     {
-        //ss2
         private IUSDGBPExchangeRateFeed uSDGBPExchangeRateFeed;
 
         public Expression(IUSDGBPExchangeRateFeed uSDGBPExchangeRateFeed)
